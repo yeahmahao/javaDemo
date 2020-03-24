@@ -1,0 +1,27 @@
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://103.45.109.29:23306/EERMMS?autoreconnect = true&useUnicode=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      max-active: 20
+  application:
+    name: taskmanager
+#  jackson:
+#    time-zone: GMT+8
+#    date-format: yyyy-MM-dd HH:mm:ss
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+mybatis:
+  # spring boot集成mybatis的方式打印sql
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    com.eth.wallet.mapper: debug
